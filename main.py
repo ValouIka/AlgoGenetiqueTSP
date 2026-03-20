@@ -3,21 +3,7 @@ from algo import *
 
 
 #### Série de tests pour l'exemple
-a = Point(3,5)
-b = Point(4,6)
-c = Point(5,7)
-d = Point(8,9)
-e = Point(10,11)
-f = Point(12,13)
-g = Point(13,14)
-
-path1 = [a,b,c,d,e,f,g]
-path2 = [a,d,e,f,g,b,c]
-path3 = [a,f,g,e,b,c,d]
-path4 = [a,e,f,g,c,b,d]
-path5 = [a,c,e,f,g,b,d]
-
-population = [path1,path2,path3,path4,path5]
+population = generate_population(10)
 
 newparents = selection(population, False)
 

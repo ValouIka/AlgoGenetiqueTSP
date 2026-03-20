@@ -5,6 +5,22 @@ import random
 import numpy as np
 from Point import Point
 
+#### Fonction de génération d'une population aléatoire de 5 individus de taille size
+def generate_population(size):
+    population = []
+    for i in range(5):
+        path = []
+        point = None
+        for j in range(size):
+            while True:
+                point = Point(random.randint(0,25),random.randint(0,25))
+                if not point in path: break
+            path += point
+        population += path
+    return population
+        
+
+
 #### Fonction d'évaluation de la taille d'un chemin
 #### "path" est une liste de points
 def path_length(path):
